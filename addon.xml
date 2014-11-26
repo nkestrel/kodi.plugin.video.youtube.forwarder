@@ -1,0 +1,21 @@
+<?xml version='1.0' encoding='UTF-8' standalone='yes'?>
+<addon id="plugin.video.youtube" name="Youtube Forwarder" provider-name="Kestrel" version="10000.0.1">
+  <requires>
+	<import addon="xbmc.python" version="2.1.0" />
+  </requires>
+  <extension point="xbmc.python.pluginsource" library="default.py">
+      <provides>video</provides>
+  </extension>
+  <extension point="xbmc.addon.metadata">
+    <platform>all</platform>
+    <summary lang="en">Forwards Youtube play requests to a different plugin.</summary>
+    <description lang="en">Takes the place of TheCollective's Youtube plugin (plugin.video.youtube) and forwards video play requests to a different plugin. This is done by using the same ID and a large version number so it takes precedence and is not overwritten by an update.</description>
+	<disclaimer lang="en"></disclaimer>
+	<platform>all</platform>
+    <website></website>
+    <source>https://github.com/nkestrel/kodi.plugin.video.youtube.forwarder</source>
+    <forum>http://forum.kodi.tv/showthread.php?tid=200735</forum>
+    <email></email>
+  </extension>
+  <extension library="lib" point="xbmc.python.module" />
+</addon>

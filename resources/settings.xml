@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<settings>
+
+  <!-- General -->
+  <category label="32010">    
+  <setting id="destBromix" type="bool" label="32020" default="true"/>
+  <setting id="destCustom" type="text" label="32030" default="plugin.video.name/play?videoid=" enable="eq(-1,false)"/>
+  </category>
+</settings>
