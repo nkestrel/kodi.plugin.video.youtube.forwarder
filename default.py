@@ -19,27 +19,35 @@
 import xbmcaddon
 import xbmcgui
 import xbmcplugin
-import CommonFunctions as common
+
+def getParams(string):
+    parsed = {};
+    if string:
+        params = string[1:].split("&")
+        for param in params:
+            pair = param.split("=")
+            if len(pair) == 2:
+                parsed[pair[0]] = pair[1]
+    return parsed
 
 if (__name__ == "__main__" ):
     pluginhandle = int(sys.argv[1])
-    params = common.getParameters(sys.argv[2])
-    
+    params = getParams(sys.argv[2])
+
     addon = xbmcaddon.Addon()
     if (addon.getSetting('destBromix') == 'true'):
         url = "plugin://plugin.video.bromix.youtube/play/?video_id="
     else:
         url = "plugin://" + addon.getSetting('destCustom') 
-    
-    if (params):
+
+    if params:
         get = params.get
-        if (get("action") == "play_video"):
-            url = url + get("videoid")  
+        if get("action") == "play_video":
+            url = url + get("videoid")
             listitem = xbmcgui.ListItem(path=url)
             xbmcplugin.setResolvedUrl(pluginhandle, True, listitem)
-    else:  
+    else:
         language = addon.getLocalizedString
         dialog = xbmcgui.Dialog()
         dialog.ok(addon.getAddonInfo('name'), language(33010) + ": " + url)
         del dialog
-            
