@@ -1,5 +1,5 @@
 <?xml version='1.0' encoding='UTF-8' standalone='yes'?>
-<addon id="plugin.video.youtube" name="Youtube Forwarder" provider-name="Kestrel" version="10000.0.1">
+<addon id="plugin.video.youtube" name="Youtube Forwarder" provider-name="Kestrel" version="10000.0.2">
   <requires>
 	<import addon="xbmc.python" version="2.1.0" />
   </requires>
@@ -9,7 +9,7 @@
   <extension point="xbmc.addon.metadata">
     <platform>all</platform>
     <summary lang="en">Forwards Youtube play requests to a different plugin.</summary>
-    <description lang="en">Takes the place of TheCollective's Youtube plugin (plugin.video.youtube) and forwards video play requests to a different plugin. This is done by using the same ID and a large version number so it takes precedence and is not overwritten by an update.</description>
+    <description lang="en">Allows plugins and remote applications designed to play videos with the standard Youtube plugin (by TheCollective) to work with a different plugin of choice.</description>
 	<disclaimer lang="en"></disclaimer>
 	<platform>all</platform>
     <website></website>
